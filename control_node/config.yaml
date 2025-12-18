@@ -1,0 +1,40 @@
+server:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
+
+consensus:
+  quorum: 2
+  total_monitors: 3
+  timeout_seconds: 10
+
+security:
+  require_signatures: true
+  allow_baseline_update: true
+  auto_response: false
+
+monitors:
+  - id: 1
+    name: "Monitor Node 1"
+    public_key_path: "keys/monitor1.pub"
+
+  - id: 2
+    name: "Monitor Node 2"
+    public_key_path: "keys/monitor2.pub"
+
+  - id: 3
+    name: "Monitor Node 3"
+    public_key_path: "keys/monitor3.pub"
+
+logging:
+  level: "INFO"
+  file: "logs/attest.log"
+  max_size_mb: 100
+  backup_count: 5
+
+storage:
+  baseline_file: "data/baseline.json"
+
+alerts:
+  email_enabled: false
+  email_to: "admin@example.com"
