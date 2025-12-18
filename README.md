@@ -1,8 +1,9 @@
 
 ## DLKA System
 
-Distributed Linux Kernel Attestation (DLKA) is a two-part system for runtime kernel integrity monitoring:
+Distributed Linux Kernel Attestation (DLKA) is a Three-part system for runtime kernel integrity monitoring:
 - **`kernel_node/`**: a Linux Kernel Module (Attest LKM) that measures kernel memory and emits integrity events.
+- **`monitor_node/`**: this is a monitor that will be present between the kernel and userspace (future work).
 - **`control_node/`**: a Python-based control service that collects attestation reports, runs consensus, manages baselines, and drives operator response.
 
 This repository combines both components into a single deployable project.
